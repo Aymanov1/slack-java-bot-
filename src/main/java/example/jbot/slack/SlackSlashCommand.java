@@ -49,10 +49,49 @@ public class SlackSlashCommand {
      * @param responseUrl
      * @return
      */
-    @RequestMapping(value = "/slash-command",
+    @RequestMapping(value = "/approve",
             method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
     public RichMessage onReceiveSlashCommand(@RequestParam("token") String token,
+                                             @RequestParam("team_id") String teamId,
+                                             @RequestParam("team_domain") String teamDomain,
+                                             @RequestParam("channel_id") String channelId,
+                                             @RequestParam("channel_name") String channelName,
+                                             @RequestParam("user_id") String userId,
+                                             @RequestParam("user_name") String userName,
+                                             @RequestParam("command") String command,
+                                             @RequestParam("text") String text,
+                                             @RequestParam("response_url") String responseUrl) {
+        // validate token
+        if (!token.equals(slackToken)) {
+            return new RichMessage("Sorry! You're not lucky enough to use our slack command.");
+        }
+
+        /** build response */
+        RichMessage richMessage = new RichMessage("The is Slash Commander!");
+        richMessage.setResponseType("in_channel");
+        // set attachments
+        Attachment[] attachments = new Attachment[1];
+        attachments[0] = new Attachment();
+        attachments[0].setText("I will perform all tasks for you.");
+        richMessage.setAttachments(attachments);
+        
+        // For debugging purpose only
+        if (logger.isDebugEnabled()) {
+            try {
+                logger.debug("Reply (RichMessage): {}", new ObjectMapper().writeValueAsString(richMessage));
+            } catch (JsonProcessingException e) {
+                logger.debug("Error parsing RichMessage: ", e);
+            }
+        }
+        
+        return richMessage.encodedMessage(); // don't forget to send the encoded message to Slack
+    }
+    
+    @RequestMapping(value = "/reject",
+            method = RequestMethod.POST,
+            consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+    public RichMessage onReceiveSlashCommand1(@RequestParam("token") String token,
                                              @RequestParam("team_id") String teamId,
                                              @RequestParam("team_domain") String teamDomain,
                                              @RequestParam("channel_id") String channelId,
