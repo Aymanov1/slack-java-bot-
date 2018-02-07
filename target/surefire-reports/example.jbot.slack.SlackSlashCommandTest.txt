@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: example.jbot.slack.SlackSlashCommandTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.363 sec - in example.jbot.slack.SlackSlashCommandTest

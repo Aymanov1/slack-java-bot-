@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="example.jbot.slack.SlackWebhooksTest" time="0" tests="1" errors="0" skipped="1" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/java/jdk1.8.0_60/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.60-b23"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/rihabm/Documents/jbot-example"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/rihabm/Documents/jbot-example"/>
+    <property name="java.runtime.version" value="1.8.0_60-b27"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/java/jdk1.8.0_60/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/home/rihabm/Documents/java9/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf5969282333095689164.tmp"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="4.11.12-100.fc24.x86_64"/>
+    <property name="user.home" value="/home/rihabm"/>
+    <property name="user.timezone" value="Africa/Tunis"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="user.name" value="rihabm"/>
+    <property name="java.class.path" value="/home/rihabm/eclipse/oxygeeeen/eclipse/plugins/org.eclipse.m2e.maven.runtime_1.8.2.20171007-0216/jars/plexus-classworlds-2.5.2.jar"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="debug"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/java/jdk1.8.0_60/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -X -e install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="fr"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_60"/>
+    <property name="java.ext.dirs" value="/usr/java/jdk1.8.0_60/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/java/jdk1.8.0_60/jre/lib/resources.jar:/usr/java/jdk1.8.0_60/jre/lib/rt.jar:/usr/java/jdk1.8.0_60/jre/lib/sunrsasign.jar:/usr/java/jdk1.8.0_60/jre/lib/jsse.jar:/usr/java/jdk1.8.0_60/jre/lib/jce.jar:/usr/java/jdk1.8.0_60/jre/lib/charsets.jar:/usr/java/jdk1.8.0_60/jre/lib/jfr.jar:/usr/java/jdk1.8.0_60/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/home/rihabm/Documents/jbot-example/EMBEDDED"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="example.jbot.slack.SlackWebhooksTest" classname="example.jbot.slack.SlackWebhooksTest" time="0">
+    <skipped/>
+    <system-out><![CDATA[17:07:31.398 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class example.jbot.slack.SlackSlashCommandTest]
+17:07:31.424 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+17:07:31.456 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+17:07:31.487 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [example.jbot.slack.SlackSlashCommandTest] from class [org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper]
+17:07:31.539 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [example.jbot.slack.SlackSlashCommandTest], using SpringBootContextLoader
+17:07:31.555 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [example.jbot.slack.SlackSlashCommandTest]: class path resource [example/jbot/slack/SlackSlashCommandTest-context.xml] does not exist
+17:07:31.556 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [example.jbot.slack.SlackSlashCommandTest]: class path resource [example/jbot/slack/SlackSlashCommandTestContext.groovy] does not exist
+17:07:31.557 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [example.jbot.slack.SlackSlashCommandTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:07:31.559 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [example.jbot.slack.SlackSlashCommandTest]: SlackSlashCommandTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:07:31.667 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [example.jbot.slack.SlackSlashCommandTest]
+17:07:31.732 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+17:07:31.733 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+17:07:31.733 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+17:07:31.745 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [example/jbot/slack/] to resources [URL [file:/home/rihabm/Documents/jbot-example/target/test-classes/example/jbot/slack/], URL [file:/home/rihabm/Documents/jbot-example/target/classes/example/jbot/slack/]]
+17:07:31.745 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/home/rihabm/Documents/jbot-example/target/test-classes/example/jbot/slack]
+17:07:31.746 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/home/rihabm/Documents/jbot-example/target/test-classes/example/jbot/slack] for files matching pattern [/home/rihabm/Documents/jbot-example/target/test-classes/example/jbot/slack/*.class]
+17:07:31.749 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/home/rihabm/Documents/jbot-example/target/classes/example/jbot/slack]
+17:07:31.749 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/home/rihabm/Documents/jbot-example/target/classes/example/jbot/slack] for files matching pattern [/home/rihabm/Documents/jbot-example/target/classes/example/jbot/slack/*.class]
+17:07:31.750 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:example/jbot/slack/*.class] to resources [file [/home/rihabm/Documents/jbot-example/target/test-classes/example/jbot/slack/SlackBotTest$TestBot.class], file [/home/rihabm/Documents/jbot-example/target/test-classes/example/jbot/slack/SlackBotTest.class], file [/home/rihabm/Documents/jbot-example/target/test-classes/example/jbot/slack/SlackSlashCommandTest.class], file [/home/rihabm/Documents/jbot-example/target/test-classes/example/jbot/slack/SlackWebhooksTest.class], file [/home/rihabm/Documents/jbot-example/target/classes/example/jbot/slack/SlackBot.class], file [/home/rihabm/Documents/jbot-example/target/classes/example/jbot/slack/SlackSlashCommand.class], file [/home/rihabm/Documents/jbot-example/target/classes/example/jbot/slack/SlackWebhooks.class]]
+17:07:31.787 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [example/jbot/] to resources [URL [file:/home/rihabm/Documents/jbot-example/target/test-classes/example/jbot/], URL [file:/home/rihabm/Documents/jbot-example/target/classes/example/jbot/]]
+17:07:31.787 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/home/rihabm/Documents/jbot-example/target/test-classes/example/jbot]
+17:07:31.787 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/home/rihabm/Documents/jbot-example/target/test-classes/example/jbot] for files matching pattern [/home/rihabm/Documents/jbot-example/target/test-classes/example/jbot/*.class]
+17:07:31.787 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/home/rihabm/Documents/jbot-example/target/classes/example/jbot]
+17:07:31.787 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/home/rihabm/Documents/jbot-example/target/classes/example/jbot] for files matching pattern [/home/rihabm/Documents/jbot-example/target/classes/example/jbot/*.class]
+17:07:31.788 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:example/jbot/*.class] to resources [file [/home/rihabm/Documents/jbot-example/target/classes/example/jbot/JBotApplication.class]]
+17:07:31.810 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/rihabm/Documents/jbot-example/target/classes/example/jbot/JBotApplication.class]
+17:07:31.811 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration example.jbot.JBotApplication for test class example.jbot.slack.SlackSlashCommandTest
+17:07:31.815 [main] DEBUG org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - @TestExecutionListeners is not present for class [example.jbot.slack.SlackSlashCommandTest]: using defaults.
+17:07:31.818 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.AutoConfigureReportTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+17:07:31.826 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+17:07:31.827 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/TransactionDefinition]
+17:07:31.830 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@40e6dfe1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1b083826, org.springframework.boot.test.autoconfigure.AutoConfigureReportTestExecutionListener@105fece7, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3ec300f1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@482cd91f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@123f1134, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7d68ef40, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5b0abc94, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@75c072cb]
+17:07:31.888 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [example.jbot.slack.SlackSlashCommandTest]
+17:07:31.889 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [example.jbot.slack.SlackSlashCommandTest]
+]]></system-out>
+  </testcase>
+</testsuite>
