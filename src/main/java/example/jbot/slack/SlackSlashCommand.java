@@ -22,108 +22,112 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SlackSlashCommand {
 
-    private static final Logger logger = LoggerFactory.getLogger(SlackSlashCommand.class);
+	private static final Logger logger = LoggerFactory.getLogger(SlackSlashCommand.class);
 
-    /**
-     * The token you get while creating a new Slash Command. You
-     * should paste the token in application.properties file.
-     */
-    @Value("${slashCommandToken}")
-    private String slackToken;
+	/**
+	 * The token you get while creating a new Slash Command. You should paste the
+	 * token in application.properties file.
+	 */
+	@Value("${slashCommandToken}")
+	private String slackToken;
 
+	/**
+	 * Slash Command handler. When a user types for example "/app help" then slack
+	 * sends a POST request to this endpoint. So, this endpoint should match the url
+	 * you set while creating the Slack Slash Command.
+	 *
+	 * @param token
+	 * @param teamId
+	 * @param teamDomain
+	 * @param channelId
+	 * @param channelName
+	 * @param userId
+	 * @param userName
+	 * @param command
+	 * @param text
+	 * @param responseUrl
+	 * @return
+	 */
+	@RequestMapping(value = "/approveRequest", method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+	public RichMessage onReceiveSlashCommand(@RequestParam("token") String token,
+			@RequestParam("team_id") String teamId, @RequestParam("team_domain") String teamDomain,
+			@RequestParam("channel_id") String channelId, @RequestParam("channel_name") String channelName,
+			@RequestParam("user_id") String userId, @RequestParam("user_name") String userName,
+			@RequestParam("command") String command, @RequestParam("text") String text,
+			@RequestParam("response_url") String responseUrl) {
+		// validate token
+		if (!token.equals(slackToken)) {
+			return new RichMessage("Sorry! You're not lucky enough to use our slack command.");
+		}
 
-    /**
-     * Slash Command handler. When a user types for example "/app help"
-     * then slack sends a POST request to this endpoint. So, this endpoint
-     * should match the url you set while creating the Slack Slash Command.
-     *
-     * @param token
-     * @param teamId
-     * @param teamDomain
-     * @param channelId
-     * @param channelName
-     * @param userId
-     * @param userName
-     * @param command
-     * @param text
-     * @param responseUrl
-     * @return
-     */
-    @RequestMapping(value = "/approve",
-            method = RequestMethod.POST,
-            consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-    public RichMessage onReceiveSlashCommand(@RequestParam("token") String token,
-                                             @RequestParam("team_id") String teamId,
-                                             @RequestParam("team_domain") String teamDomain,
-                                             @RequestParam("channel_id") String channelId,
-                                             @RequestParam("channel_name") String channelName,
-                                             @RequestParam("user_id") String userId,
-                                             @RequestParam("user_name") String userName,
-                                             @RequestParam("command") String command,
-                                             @RequestParam("text") String text,
-                                             @RequestParam("response_url") String responseUrl) {
-        // validate token
-        if (!token.equals(slackToken)) {
-            return new RichMessage("Sorry! You're not lucky enough to use our slack command.");
-        }
+		/** build response */
+		RichMessage richMessage = new RichMessage("The is Slash Commander!");
+		richMessage.setResponseType("in_channel");
+		// set attachments
+		Attachment[] attachments = new Attachment[1];
+		attachments[0] = new Attachment();
+		attachments[0].setText("I will perform all tasks for you.");
+		richMessage.setAttachments(attachments);
 
-        /** build response */
-        RichMessage richMessage = new RichMessage("The is Slash Commander!");
-        richMessage.setResponseType("in_channel");
-        // set attachments
-        Attachment[] attachments = new Attachment[1];
-        attachments[0] = new Attachment();
-        attachments[0].setText("I will perform all tasks for you.");
-        richMessage.setAttachments(attachments);
-        
-        // For debugging purpose only
-        if (logger.isDebugEnabled()) {
-            try {
-                logger.debug("Reply (RichMessage): {}", new ObjectMapper().writeValueAsString(richMessage));
-            } catch (JsonProcessingException e) {
-                logger.debug("Error parsing RichMessage: ", e);
-            }
-        }
-        
-        return richMessage.encodedMessage(); // don't forget to send the encoded message to Slack
-    }
-    
-    @RequestMapping(value = "/reject",
-            method = RequestMethod.POST,
-            consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-    public RichMessage onReceiveSlashCommand1(@RequestParam("token") String token,
-                                             @RequestParam("team_id") String teamId,
-                                             @RequestParam("team_domain") String teamDomain,
-                                             @RequestParam("channel_id") String channelId,
-                                             @RequestParam("channel_name") String channelName,
-                                             @RequestParam("user_id") String userId,
-                                             @RequestParam("user_name") String userName,
-                                             @RequestParam("command") String command,
-                                             @RequestParam("text") String text,
-                                             @RequestParam("response_url") String responseUrl) {
-        // validate token
-        if (!token.equals(slackToken)) {
-            return new RichMessage("Sorry! You're not lucky enough to use our slack command.");
-        }
+		// For debugging purpose only
+		if (logger.isDebugEnabled()) {
+			try {
+				logger.debug("Reply (RichMessage): {}", new ObjectMapper().writeValueAsString(richMessage));
+			} catch (JsonProcessingException e) {
+				logger.debug("Error parsing RichMessage: ", e);
+			}
+		}
 
-        /** build response */
-        RichMessage richMessage = new RichMessage("The is Slash Commander!");
-        richMessage.setResponseType("in_channel");
-        // set attachments
-        Attachment[] attachments = new Attachment[1];
-        attachments[0] = new Attachment();
-        attachments[0].setText("I will perform all tasks for you.");
-        richMessage.setAttachments(attachments);
-        
-        // For debugging purpose only
-        if (logger.isDebugEnabled()) {
-            try {
-                logger.debug("Reply (RichMessage): {}", new ObjectMapper().writeValueAsString(richMessage));
-            } catch (JsonProcessingException e) {
-                logger.debug("Error parsing RichMessage: ", e);
-            }
-        }
-        
-        return richMessage.encodedMessage(); // don't forget to send the encoded message to Slack
-    }
+		return richMessage.encodedMessage(); // don't forget to send the encoded message to Slack
+	}
+
+	/**
+	 * Slash Command handler. When a user types for example "/app help" then slack
+	 * sends a POST request to this endpoint. So, this endpoint should match the url
+	 * you set while creating the Slack Slash Command.
+	 *
+	 * @param token
+	 * @param teamId
+	 * @param teamDomain
+	 * @param channelId
+	 * @param channelName
+	 * @param userId
+	 * @param userName
+	 * @param command
+	 * @param text
+	 * @param responseUrl
+	 * @return
+	 */
+	@RequestMapping(value = "/rejectRequest", method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+	public RichMessage onReceiveSlashCommand1(@RequestParam("token") String token,
+			@RequestParam("team_id") String teamId, @RequestParam("team_domain") String teamDomain,
+			@RequestParam("channel_id") String channelId, @RequestParam("channel_name") String channelName,
+			@RequestParam("user_id") String userId, @RequestParam("user_name") String userName,
+			@RequestParam("command") String command, @RequestParam("text") String text,
+			@RequestParam("response_url") String responseUrl) {
+		// validate token
+		if (!token.equals(slackToken)) {
+			return new RichMessage("Sorry! You're not lucky enough to use our slack command.");
+		}
+
+		/** build response */
+		RichMessage richMessage = new RichMessage("The is Slash Commander!");
+		richMessage.setResponseType("in_channel");
+		// set attachments
+		Attachment[] attachments = new Attachment[1];
+		attachments[0] = new Attachment();
+		attachments[0].setText("I will perform all tasks for you.");
+		richMessage.setAttachments(attachments);
+
+		// For debugging purpose only
+		if (logger.isDebugEnabled()) {
+			try {
+				logger.debug("Reply (RichMessage): {}", new ObjectMapper().writeValueAsString(richMessage));
+			} catch (JsonProcessingException e) {
+				logger.debug("Error parsing RichMessage: ", e);
+			}
+		}
+
+		return richMessage.encodedMessage(); // don't forget to send the encoded message to Slack
+	}
 }
