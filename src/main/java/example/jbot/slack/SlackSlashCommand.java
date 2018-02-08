@@ -60,6 +60,7 @@ public class SlackSlashCommand {
 		System.out.println("command" + command);
 		System.out.println("response_url" + responseUrl);
 		System.out.println("text" + text);
+		System.out.println("slackToken" + slackToken);
 		if (!token.equals(slackToken)) {
 			return new RichMessage("Sorry! You're not lucky enough to use our slack command.");
 		}
