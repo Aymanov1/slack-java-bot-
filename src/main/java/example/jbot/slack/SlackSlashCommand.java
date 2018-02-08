@@ -48,7 +48,7 @@ public class SlackSlashCommand {
 	 * @param responseUrl
 	 * @return
 	 */
-	@RequestMapping(value = "/approveRequest", method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+	@RequestMapping(value = "/approverequest", method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
 	public RichMessage onReceiveSlashCommand(@RequestParam("token") String token,
 			@RequestParam("team_id") String teamId, @RequestParam("team_domain") String teamDomain,
 			@RequestParam("channel_id") String channelId, @RequestParam("channel_name") String channelName,
